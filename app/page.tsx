@@ -1,113 +1,193 @@
+import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav className="flex justify-between py-4 px-8 fixed w-full top-0 backdrop-blur-xl z-20">
+        <div>
+          <Link href="/" className="flex gap-2 items-center">
+            <Image src="/logo.png" width="50" height="50" alt="logo" />
+          </Link>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+        <div className="flex gap-5 items-center">
+          <Link href="#detail">
+            <p>details</p>
+          </Link>
+          <Link href="#contact">
+            <p>contact</p>
+          </Link>
+          <Link href="#faq">
+            <p>faq</p>
+          </Link>
+        </div>
+      </nav>
+      <main className="mb-20 px-6">
+        <div className="h-screen flex justify-center items-center flex-col space-y-2 my-2">
+          <Image
+            src="https://utfs.io/f/17c5e677-5b6e-441f-bf8c-e024c3a1e1cf-9dzvxh.jpg"
+            alt="NASA Space Apps Surabaya"
+            width="1920"
+            height="200"
+            className="fixed -z-20 bg-cover opacity-50 w-full h-screen object-cover object-center transform scale-100 "
+          />
+          <Image src="/logo.svg" width="200" height="200" alt="logo" />
+          <div className="text-5xl font-bold text-white text-center pt-12 md:pt-0">
+            NASA Space
+            <div></div>Surabaya Hackathon
+          </div>
+          <div className="text-2xl font-semibold text-center">
+            Compete for a prize pool of IDR 10,000,000
+          </div>
+          <div className="bg-transparent border-2 border-[#2563EB] rounded-lg p-3 text-2xl text-center">
+            <p>5-6 October • 10AM - 6PM • SIS Surabaya • FREE</p>
+          </div>
+          <div className="h-10"></div>
+          <Link href="https://forms.gle/xggVjcUktAzfWbBc6">
+            {" "}
+            <Button className="md:w-[400px] bg-[#2563EB] hover:opacity-90 hover:bg-[#2563EB] text-white">
+              Register Now
+            </Button>
+          </Link>
+          <Link
+            href="https://drive.google.com/file/d/1qE57-9vD3H_ZUJimUCargdMfkryAov3L/view?usp=sharing"
+            id="detail"
+          >
+            {" "}
+            <Button
+              className="md:w-[400px] bg-[#2563EB] text-white bg-transparent border-[#2563EB] hover:bg-[#2563EB] hover:text-white"
+              variant="outline"
+            >
+              Check our Flyer
+            </Button>
+          </Link>
+        </div>
+        <div className="max-w-3xl min-h-[300px] bg-gradient-to-br from-[#0042A6] to-[#07173F] rounded-lg mx-auto mb-20 grid space-y-4 md:space-y-0 md:grid-cols-2 p-12">
+          <p className="text-4xl font-bold">What will I do?</p>
+          <p className="text-xl font-medium">
+            Your team will pick one of 25 project ideas made by NASA. These
+            range from making a story about space to creating a artificial
+            ecosystem! These projects are made with beginners in mind, so
+            anybody at any skill level can join.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        </div>
+        <div className="max-w-3xl min-h-[300px] bg-gradient-to-br from-[#0042A6] to-[#07173F] rounded-lg mx-auto mb-20 grid space-y-4 md:space-y-0 md:grid-cols-2 md:grid-rows-2 p-12 gap-y-8">
+          <div>
+            <p className="text-3xl font-bold">Where?</p>
+            <p className="text-xl">
+              SIS Surabaya Jl. Mayjen HR. Muhammad No.371, Sonokwijenan, Kec.
+              Sukomanunggal, Surabaya, Jawa Timur 60189
+            </p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold">Date & Time</p>
+            <p className="text-xl">5-6 October (Saturday & Sunday)</p>
+            <p className="text-xl">10AM - 6PM Everyday</p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold">Who can join?</p>
+            <p className="text-xl">
+              Anybody under 18 and is in secondary / high school!
+            </p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold">Team size??</p>
+            <p className="text-xl">
+              Teams up to 4 people are allowed, with members from different
+              schools permitted!
+            </p>
+          </div>
+        </div>
+        <div
+          id="contact"
+          className="max-w-3xl h-[300px] rounded-lg bg-gradient-to-br from-[#0042A6] to-[#07173F] mx-auto mb-20 flex flex-col space-y-4 justify-center items-center px-8 text-center md:px-0"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+          <p className="text-5xl font-bold">Contact</p>
+          <p className="text-2xl">+62 85701833917</p>
+          <p className="text-2xl">25jacques.milton@sisschools.org</p>
+        </div>
+        <div className="max-w-3xl h-[300px] rounded-lg bg-gradient-to-br from-[#0042A6] to-[#07173F] mx-auto mb-20 flex flex-col space-y-4 justify-center items-center px-8 text-center md:px-0">
+          <p className="text-3xl md:text-5xl font-bold">
+            Register Now For Free
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          <Link href="https://forms.gle/xggVjcUktAzfWbBc6">
+            {" "}
+            <Button
+              variant="outline"
+              className="bg-transparent border-[#2563EB] hover:bg-[#2563EB] hover:text-white"
+            >
+              Register Now
+            </Button>
+          </Link>
+        </div>
+        <div className="max-w-3xl mx-auto text-3xl" id="faq">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>Who can join?</AccordionTrigger>
+              <AccordionContent>
+                Anybody from secondary to high school! This competition is also
+                to any skills area & level. Most projects aren&apos;t coding so
+                artists, videographers, etc are invited!
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-left">
+                Is it really any skill level?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yep! Most projects that students can pick to do are actually not
+                coding. They involve a lot of design, research, and creativity.
+                For example, one of the project is to create a story about NASA.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-left">
+                How much spots are there?
+              </AccordionTrigger>
+              <AccordionContent>
+                We&apos;re still deciding how much spots, but its between 50 to
+                100.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-left">
+                Should I / my child join?
+              </AccordionTrigger>
+              <AccordionContent>
+                If you want your kid (or you) to learn about technology,
+                creativity, innovation, and teamwork, then yes! This is a great
+                opportunity to learn about all of those things.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="text-left">
+                How will the cash be distributed?
+              </AccordionTrigger>
+              <AccordionContent>
+                There are 2 ways of distribution (up to the winner). First is a
+                virtual visa card that can be used anywhere. Second is a bank
+                transfer.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-6">
+              <AccordionTrigger className="text-left">
+                What about food?
+              </AccordionTrigger>
+              <AccordionContent>
+                We are still deciding on this. We will update you on this soon
+                through the phone number you provide when registering.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </main>
+    </>
   );
 }
