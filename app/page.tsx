@@ -98,7 +98,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <p className="text-3xl font-bold">Team size??</p>
+            <p className="text-3xl font-bold">Team size?</p>
             <p className="text-xl">
               Teams up to 4 people are allowed, with members from different
               schools permitted!
@@ -111,7 +111,7 @@ export default function Home() {
         >
           <p className="text-5xl font-bold">Contact</p>
           <p className="text-2xl">+62 85701833917</p>
-          <p className="text-2xl">25jacques.milton@sisschools.org</p>
+          <p className="text-xl md:text-2xl">25jacques.milton@sisschools.org</p>
         </div>
         <div className="max-w-3xl h-[300px] rounded-lg bg-gradient-to-br from-[#0042A6] to-[#07173F] mx-auto mb-20 flex flex-col space-y-4 justify-center items-center px-8 text-center md:px-0">
           <p className="text-3xl md:text-5xl font-bold">
@@ -183,6 +183,14 @@ export default function Home() {
               <AccordionContent>
                 We are still deciding on this. We will update you on this soon
                 through the phone number you provide when registering.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-7">
+              <AccordionTrigger className="text-left">Notes</AccordionTrigger>
+              <AccordionContent>
+                We are fiscally sponsored by Hack Club Bank. Funds are managaed
+                by the HelpHack account (which was formed specifically and only
+                for this).
               </AccordionContent>
             </AccordionItem>
           </Accordion>
