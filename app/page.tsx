@@ -127,6 +127,40 @@ export default function Home() {
             </Button>
           </Link>
         </div>
+        <div
+          id="contact"
+          className="max-w-3xl py-6 rounded-lg bg-gradient-to-br from-[#0042A6] to-[#07173F] mx-auto mb-20 flex flex-col space-y-4 justify-center items-center px-8 text-center md:px-0"
+        >
+          <p className="text-5xl font-bold">Sponsors</p>
+          <div className="flex flex-col md:flex-row space-x-6 items-center md:items-start justify-center ">
+            <div className="flex flex-col items-center space-y-2">
+              <p className="text-yellow-400 font-bold pt-5 md:pt-0">Gold</p>
+              <Image
+                src="/hackclub.svg"
+                width="200"
+                height="100"
+                alt="hackclublogo"
+              />
+            </div>
+            <div className="flex flex-col items-center mt-8 md:mt-0 space-y-2">
+              <p className="text-slate-400 font-bold">Silver</p>
+              <Image
+                src="/jaspal.jpg"
+                width="100"
+                height="100"
+                alt="hackclublogo"
+                className="rounded-full"
+              />
+              <Image
+                src="/indomilk.png"
+                width="100"
+                height="100"
+                alt="hackclublogo"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+        </div>
         <div className="max-w-3xl mx-auto text-3xl" id="faq">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
@@ -186,7 +220,9 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-7">
-              <AccordionTrigger className="text-left">Notes</AccordionTrigger>
+              <AccordionTrigger className="text-left">
+                Our status
+              </AccordionTrigger>
               <AccordionContent>
                 We are fiscally sponsored by Hack Club Bank. Funds are managaed
                 by the HelpHack account (which was formed specifically and only
