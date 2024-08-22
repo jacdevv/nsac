@@ -158,6 +158,19 @@ export default function Home() {
                 alt="hackclublogo"
                 className="rounded-full"
               />
+              <Image
+                src="/xyz.svg"
+                width="100"
+                height="100"
+                alt="hackclublogo"
+              />
+              <Image
+                src="/abc.png"
+                width="100"
+                height="100"
+                alt="hackclublogo"
+                className="pt-4"
+              />
             </div>
           </div>
         </div>
