@@ -14,7 +14,7 @@ export default function Home() {
       <nav className="flex justify-between py-4 px-8 fixed w-full top-0 backdrop-blur-xl z-20">
         <div>
           <Link href="/" className="flex gap-2 items-center">
-            <Image src="/logo.png" width="50" height="50" alt="logo" />
+            <Image src="/logo.webp" width="50" height="50" alt="logo" />
           </Link>
         </div>
         <div className="flex gap-5 items-center">
