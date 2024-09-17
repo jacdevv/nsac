@@ -165,11 +165,11 @@ export default function Home() {
                 alt="hackclublogo"
               />
               <Image
-                src="/abc.png"
+                src="/abc.jpg"
                 width="100"
                 height="100"
                 alt="hackclublogo"
-                className="pt-4"
+                className="pt-4 rounded-lg"
               />
             </div>
           </div>
