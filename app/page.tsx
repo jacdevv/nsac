@@ -65,7 +65,7 @@ export default function Home() {
               className="md:w-[400px] bg-[#2563EB] text-white bg-transparent border-[#2563EB] hover:bg-[#2563EB] hover:text-white"
               variant="outline"
             >
-              Check our Flyer
+              Learn More
             </Button>
           </Link>
         </div>
