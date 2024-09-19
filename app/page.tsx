@@ -141,6 +141,7 @@ export default function Home() {
                 height="100"
                 alt="hackclublogo"
               />
+              <Image src="/bee.png" width="200" height="100" alt="codingbee" />
             </div>
             <div className="flex flex-col items-center mt-8 md:mt-0 space-y-2">
               <p className="text-slate-400 font-bold">Silver</p>
@@ -165,7 +166,7 @@ export default function Home() {
                 alt="hackclublogo"
               />
               <Image
-                src="/abc.jpg"
+                src="/abc.png"
                 width="100"
                 height="100"
                 alt="hackclublogo"
